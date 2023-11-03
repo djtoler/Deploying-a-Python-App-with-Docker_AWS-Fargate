@@ -84,7 +84,7 @@ resource "aws_ecs_service" "dp7_bank_app_ecs" {
 }
 
 
-resource "aws_key_pair" "dp7_bastion_key" {
+resource "aws_key_pair" "dp7-bastion-key" {
   key_name   = "bastion_key"
   public_key = file("dp7_bastion_key.pub")
 }
@@ -116,7 +116,7 @@ resource "aws_security_group" "bastion_sg" {
 resource "aws_instance" "bastion_host" {
   ami           = "ami-0fc5d935ebf8bc3bc" 
   instance_type = "t2.micro"
-  key_name      = aws_key_pair.bastion_key.key_name
+  key_name      = aws_key_pair.dp7-bastion-key.key_name
   subnet_id     = aws_subnet.public_a.id
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
 
