@@ -67,7 +67,7 @@ resource "aws_instance" "dp7_jenkins_docker_server" {
   instance_type                   = var.ec2_instance_type
   vpc_security_group_ids          = [aws_security_group.dp7_security_group.id]
   tags                            = var.ec2_instance_tag_3
-  user_data                       = base64encode(file(var.ud_jenkins_agent_tf ))
+  user_data                       = base64encode(file(var.ud_docker_instance ))
   associate_public_ip_address     = var.public_ip
   key_name                        = var.key_name
   iam_instance_profile            = var.instance_profile_name
