@@ -14,7 +14,7 @@ resource "aws_lb_target_group" "dp7_bank_app" {
   depends_on = [aws_alb.dp7_bank_app]
 }
 
-#Application Load Balancer
+#Appplication Load Balancer
 resource "aws_alb" "dp7_bank_app" {
   name               = "dp7_bank_lb_name"
   internal           = false
