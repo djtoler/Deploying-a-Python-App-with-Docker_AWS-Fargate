@@ -58,7 +58,7 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
 }
 
 # ECS Service
-resource "aws_ecs_service" "dp7_bank_app_ecs" {
+resource "aws_ecs_service" "dp7-bank-app-ecs" {
   name                 = "dp7_bank-app_ecs_service"
   cluster              = aws_ecs_cluster.aws-ecs-cluster.id
   task_definition      = aws_ecs_task_definition.aws-ecs-task.arn
