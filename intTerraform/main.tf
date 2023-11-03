@@ -29,7 +29,7 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
   container_definitions = <<EOF
   [
   {
-      "name": "dp7_nank_app_container",
+      "name": "dp7_bank_app_container",
       "image": "djtoler/dp7_bank:latest",
       "logConfiguration": {
         "logDriver": "awslogs",
