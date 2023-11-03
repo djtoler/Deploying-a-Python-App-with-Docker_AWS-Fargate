@@ -11,7 +11,7 @@ Demonstrate your ability to deploy ECS with Terraform.
 
 - Be sure to follow the deployment instructions from this repository  
 
-- Document your progress in a .md file in your repository. Also, document any issues you may run into and what you did to fix them.
+- Document your progress in a .md file in your repository. Also, document any issues you may run into and what you did to fix them..
 
 - Make sure your documentation includes these sections:
   - Purpose
