@@ -141,7 +141,7 @@ resource "aws_instance" "private_app_instance_a" {
   instance_type                   = "t2.micro"
   subnet_id                       = aws_subnet.private_a.id
   vpc_security_group_ids          = [aws_security_group.ingress_app.id]
-  key_name                        = "dp6_kp"
+  key_name                        = "dp7_key"
   tags                            = {Name = "DP7PrivateAppA"}
 }
 
@@ -150,6 +150,6 @@ resource "aws_instance" "private_app_instance_b" {
   instance_type                   = "t2.micro"
   subnet_id                       = aws_subnet.private_b.id
   vpc_security_group_ids          = [aws_security_group.ingress_app.id]
-  key_name                        = "dp6_kp"
+  key_name                        = "dp7_key"
   tags                            = {Name = "DP7PrivateAppB"}
 }
