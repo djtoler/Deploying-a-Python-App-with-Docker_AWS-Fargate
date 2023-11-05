@@ -1,3 +1,12 @@
+## Table of Contents
+1. [Purpose](#purpose)
+2. [Issues](#issues)
+3. [Creating CICD Pipeline & Infrastructure](#creating-cicd-pipeline--infrastructure)
+4. [Explaining CICD Pipeline & Infrastructure](#explaining-cicd-pipeline--infrastructure)
+5. [Application Successfully Deployed](#application-successfully-deployed)
+6. [System Diagram](#system-diagram)
+7. [System Optimization](#system-optimization)
+
 ## Purpose
 ## Issues
 * #### Error for having too many VPC's in our AWS account
@@ -56,5 +65,8 @@
 ---
 
 ## System Diagram
+
+
+
 
 
