@@ -1,7 +1,4 @@
 ## Purpose
-
----
-
 ## Issues
 * #### Error for having too many VPC's in our AWS account
 * #### Thought we needed a EC2 instances to run our Dockerfiles
@@ -12,6 +9,23 @@
 ---
 
 ## Steps
+### _Create CICD Pipeline & Infrastructure_
+* #### Clone the banking application repository
+* #### Create a `dev` branch in the repository and switch to it
+* #### Make a `Dockerfile` for our Jenkins pipeline to build a Docker image from
+* #### Create a distributed Jenkins CICD infrastructure architecture using Terraform
+    * #### Create an EC2 instance for our `Jenkins Controller` using this userdata script 
+    * #### Create an EC2 instance for our `Jenkins-Terraform agent` using this userdata script
+    * #### Create an EC2 instance for our `Jenkins-Docker agent` using this userdata script
+    * #### Deploy infrastructure using this automated deployment script
+* #### Log into Jenkins server 
+    * #### Add DockerHub credentials
+    * #### Add AWS credentials
+    * #### Install `Utility Pipeline Steps` & `Docker Pipeline` plugins
+    * #### Create 2 Jenkins agents
+    * #### Edit enviornment variables & Docker image references in Jenkinsfile
+    * #### Create a multi branch pipeline
+  
 ### _CICD Pipeline & Infrastructure Explanation_
 #|<span style="width:200px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | Business Case  |
 |---|---|---|---|---|
@@ -26,7 +40,7 @@
 |9. | _Run `terraform plan -out plan.tfplan`_| Terraform compares current state of resources to our `.tf` files, makes a plan to deploy what we ask for and saves it to a file called `tfplan.tf` | ![9](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/9.PNG)  |   |
 |10. | _Run `terraform apply plan.tfplan`_|Terraform attempts to deploy the resources saved in the `plan.tfplan` file from step 9| ![10](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/10.PNG) |   |   
 |#|Step| Purpose  | Terraform  | Business Case  |
-|11. | _Create the following<br><ul><li>VPC</li><li>2 Private Subnets</li><li>2 Public Subnets</li><li>Elastic IP</li><li>Internet Gateway</li><li>NAT Gateway</li><li>Public Route Table</li><li>Private Route Table</li><li>Load Balancer Security Group</li><li>Application Security Group</li></ul>_ | Set the foundation to deploy our application infrastructure onto |  ![vpc](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/vpc.PNG)    |   | 
+|11. | _Create the following<br><ul><li>VPC</li><li>2 Private Subnets</li><li>2 Public Subnets</li><li>Elastic IP</li><li>Internet Gateway</li><li>NAT Gateway</li><li>Public Route Table</li><li>Private Route Table</li><li>Load Balancer Security Group(Port 80)</li><li>Application Security Group(Port 8080)</li></ul>_ | Set the foundation to deploy our application infrastructure onto |  ![vpc](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/vpc.PNG)    |   | 
 |12. | _Create a listener for the load balancer_| To set the rules for the load balancer like which port to listen on, what to do with requests...| ![12](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/11.PNG)  |   |  
 |13. | _Create a application load balancer_ | To route traffic based on certain requirements | ![13](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/12.PNG)  |   |
 |14. | _Create a load balancer target group_ | To logically group resources together for the load balancer to route requests to (like web server group and application server group)| ![14](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/13.PNG) |   |
