@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/djtoler/Deployment7/blob/main/dp7_assets/dp7img.png">
+</p>
+
 ## Table of Contents
 1. [Purpose](#purpose)
 2. [Issues](#issues)
