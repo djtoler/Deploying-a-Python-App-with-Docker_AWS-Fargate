@@ -15,7 +15,7 @@
 |9. | Run `terraform plan -out plan.tfplan`| Terraform compares current state of resources to our `.tf` files, makes a plan to deploy what we ask for and saves it to a file called `tfplan.tf` | ![9](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/9.PNG)  |   |
 |10. | Run `terraform apply plan.tfplan`|Terraform attempts to deploy the resources saved in the `plan.tfplan` file from step 9| ![10](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/10.PNG) |   |   
 |#|Step| Purpose  | Terraform  | Business Case  |
-|11. | <br><ul><li>VPC</li><li>2 Private Subnets</li><li>2 Public Subnets</li><li>Elastic IP</li><li>Internet Gateway</li><li>NAT Gateway</li><li>Public Route Table</li><li>Private Route Table</li><li>Load Balancer Security Group</li><li>Application Security Group</li></ul> | Set the foundation to deploy our application infrastructure onto |  [VPC.tf](https://github.com/djtoler/Deployment7/blob/main/intTerraform/vpc.tf)    |   | 
+|11. | Create the following<br><ul><li>VPC</li><li>2 Private Subnets</li><li>2 Public Subnets</li><li>Elastic IP</li><li>Internet Gateway</li><li>NAT Gateway</li><li>Public Route Table</li><li>Private Route Table</li><li>Load Balancer Security Group</li><li>Application Security Group</li></ul> | Set the foundation to deploy our application infrastructure onto |  ![vpc](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/vpc.PNG)    |   | 
 |12. | Create a listener for the load balancer| To set the rules for the load balancer like which port to listen on, what to do with requests...| ![12](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/11.PNG)  |   |  
 |13. | Create a application load balancer | To route traffic based on certain requirements | ![13](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/12.PNG)  |   |
 |14. | Create a load balancer target group| To logically group resources together for the load balancer to route requests to (like web server group and application server group)| ![14](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/13.PNG) |   |
@@ -23,13 +23,16 @@
 |16. | Create a ECS task(container)| For defining our containers configuration such as the image to build the container from, the ports to open on the container...| ![16](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/15.PNG)  |   |
 |17. | Create a ECS service| For defining our container context like what cluster/tasks definition we'll use, how many tasks and the load balancer we'll use to route our container traffic | ![17](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/16.PNG)  |   |
 |18a. | Terraform successfully deploys our infrastructure| To continuiously deploy our containerized banking application in a private subnet, only available via our application load balancer URL | ![18](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/18a.PNG)  |  |
-|18b. | Our Terraform build fails and the `Apply` stage o four Jenkins pipeline fails | To inform us that something is wrong with our infrastructure configuration | ![18b](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/18b.PNG)  | |
-
+### Successful Deployment
 <p align="center">
 <img src="https://github.com/djtoler/Deployment7/blob/main/dp7_assets/dp7-alb.PNG">
 </p>
 
+### Unsuccessful Deployment
+|18b. | Our Terraform build fails and the `Apply` stage o four Jenkins pipeline fails | To inform us that something is wrong with our infrastructure configuration | ![18b](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/18b.PNG)  | Troubleshoot from Jenkins console output|
+
+
+
 ---
 
 ## System Diagram
-
