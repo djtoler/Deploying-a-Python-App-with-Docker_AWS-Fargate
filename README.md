@@ -1,12 +1,8 @@
-<p align="center">
-<img src="https://github.com/djtoler/Deployment7/blob/main/dp7_assets/dp7img.png">
-</p>
-
 ## Table of Contents
 1. [Purpose](#purpose)
 2. [Issues](#issues)
-3. [Creating CICD Pipeline & Infrastructure](#creating-cicd-pipeline-and-infrastructure)
-4. [Explaining CICD Pipeline & Infrastructure](#explaining-cicd-pipeline-and-infrastructure)
+3. [Creating CICD Pipeline and Infrastructure](#creating-cicd-pipeline-and-infrastructure)
+4. [Explaining CICD Pipeline and Infrastructure](#explaining-cicd-pipeline-and-infrastructure)
 5. [Application Successfully Deployed](#application-successfully-deployed)
 6. [System Diagram](#system-diagram)
 7. [System Optimization](#system-optimization)
@@ -73,7 +69,6 @@
 ---
 
 ## System Optimization
-
 
 
 
