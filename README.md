@@ -1,8 +1,8 @@
 ## Table of Contents
 1. [Purpose](#purpose)
 2. [Issues](#issues)
-3. [Creating CICD Pipeline & Infrastructure](#creating-cicd-pipeline--infrastructure)
-4. [Explaining CICD Pipeline & Infrastructure](#explaining-cicd-pipeline--infrastructure)
+3. [Creating CICD Pipeline & Infrastructure](#creating-cicd-pipeline-and-infrastructure)
+4. [Explaining CICD Pipeline & Infrastructure](#explaining-cicd-pipeline-and-infrastructure)
 5. [Application Successfully Deployed](#application-successfully-deployed)
 6. [System Diagram](#system-diagram)
 7. [System Optimization](#system-optimization)
@@ -18,7 +18,7 @@
 ---
 
 ## Steps
-### _Create CICD Pipeline & Infrastructure_
+### _Create CICD Pipeline and Infrastructure_
 * #### Clone the banking application repository
 * #### Create a `dev` branch in the repository and switch to it
 * #### Make a `Dockerfile` for our Jenkins pipeline to build a Docker image from
@@ -35,7 +35,7 @@
     * #### Edit enviornment variables & Docker image references in Jenkinsfile
     * #### Create a multi branch pipeline
   
-### _CICD Pipeline & Infrastructure Explanation_
+### _CICD Pipeline and Infrastructure Explanation_
 #|<span style="width:200px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | Business Case  |
 |---|---|---|---|---|
 |1. |_Jenkins controller tells Docker agent to start working the pipeline_| Efficently handle workloads using a distributed system strategy  | ![1](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/1.PNG)   |   |
@@ -65,6 +65,11 @@
 ---
 
 ## System Diagram
+
+---
+
+## System Optimization
+
 
 
 
