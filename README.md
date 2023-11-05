@@ -13,31 +13,39 @@
 
 ## Purpose
 ## Issues
-* #### Error for having too many VPC's in our AWS account
-* #### Thought we needed a EC2 instances to run our Dockerfiles
-* #### AWS naming conventions dont allow undersocres in certain resources like Application Load Balancer names
-* #### Docker image naming convention
-* #### Dockerfile trying to write duplicate entry into database when running the `load-data.py` file
+* #### Error for having too many VPC's in our AWS account: _Deleted unused VPC from account_
+* #### Thought we needed EC2 instances to run our Dockerfiles: _Re-read .tf files, visited load balancer URL & saw application running_
+* #### AWS naming conventions dont allow undersocres in certain resources like Application Load Balancer names: _Changed names with underscores to dashes_
+* #### Docker image name mispelled: _Check error logs and fix spelling error_
+* #### Dockerfile trying to write duplicate entry into database when running the `load-data.py` file: _Remove database files from Dockerfile since the data was already loaded in previous Jenkins build attempts_
 
 ---
 
 ## Steps
 ### _Create CICD Pipeline and Infrastructure_
+* #### [Create a remote GitHub repository](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-github_repo_create.sh)
 * #### Clone the banking application repository
+    * ```
+    git clone https://github.com/djtoler/Deployment7.git
+    cd Deployment7
+    ```
 * #### Create a `dev` branch in the repository and switch to it
+    * ```
+    git checkout -b dev
+    ```
 * #### Make a `Dockerfile` for our Jenkins pipeline to build a Docker image from
 * #### Create a distributed Jenkins CICD infrastructure architecture using Terraform
-    * #### Create an EC2 instance for our `Jenkins Controller` using this userdata script 
-    * #### Create an EC2 instance for our `Jenkins-Terraform agent` using this userdata script
-    * #### Create an EC2 instance for our `Jenkins-Docker agent` using this userdata script
-    * #### Deploy infrastructure using this automated deployment script
+    * #### Create an EC2 instance for our `Jenkins Controller` [using this userdata script](https://github.com/djtoler/Deployment7/blob/main/ud_jenkins_controller.sh) 
+    * #### Create an EC2 instance for our `Jenkins-Terraform agent` [using this userdata script](https://github.com/djtoler/Deployment7/blob/main/ud_jenkins_agent_tf.sh)
+    * #### Create an EC2 instance for our `Jenkins-Docker agent`[ using this userdata script](https://github.com/djtoler/Deployment7/blob/main/ud_docker_instance.sh)
+    * #### Deploy infrastructure [using this automated deployment script](https://github.com/djtoler/Deployment7/blob/main/tf_deploy.sh)
 * #### Log into Jenkins server 
     * #### Add DockerHub credentials
     * #### Add AWS credentials
     * #### Install `Utility Pipeline Steps` & `Docker Pipeline` plugins
-    * #### Create 2 Jenkins agents
+    * #### [Create 2 Jenkins agents](https://github.com/djtoler/automated_installation_scripts/blob/main/manual-jenkins_agent.txt): 1 for our Terraform instance and 1 for our Docker instance
     * #### Edit enviornment variables & Docker image references in Jenkinsfile
-    * #### Create a multi branch pipeline
+    * #### [Create a multi branch pipeline](https://github.com/djtoler/automated_installation_scripts/blob/main/manual_jenkins_multi_branch.txt)
   
 ### _CICD Pipeline and Infrastructure Explanation_
 #|<span style="width:200px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | Business Case  |
@@ -69,6 +77,10 @@
 ---
 
 ## System Diagram
+
+<p align="center">
+<img src="https://github.com/djtoler/Deployment7/blob/main/dp7Diagram.png">
+</p>
 
 ---
 
