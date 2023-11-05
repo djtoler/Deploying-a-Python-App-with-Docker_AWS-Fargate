@@ -1,5 +1,16 @@
 ## Purpose
+
+---
+
 ## Issues
+* #### Error for having too many VPC's in our AWS account
+* #### Thought we needed a EC2 instances to run our Dockerfiles
+* #### AWS naming conventions dont allow undersocres in certain resources like Application Load Balancer names
+* #### Docker image naming convention
+* #### Dockerfile trying to write duplicate entry into database when running the `load-data.py` file
+
+---
+
 ## Steps
 ### _CICD Pipeline & Infrastructure Explanation_
 #|<span style="width:200px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | Business Case  |
