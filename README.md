@@ -15,7 +15,7 @@
 |9. | Run `terraform plan -out plan.tfplan`| Terraform compares current state of resources to our `.tf` files, makes a plan to deploy what we ask for and saves it to a file called `tfplan.tf` | ![9](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/9.PNG)  |   |
 |10. | Run `terraform apply plan.tfplan`|Terraform attempts to deploy the resources saved in the `plan.tfplan` file from step 9| ![10](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/10.PNG) |   |   
 |#|Step| Purpose  | Terraform  | Business Case  |
-|11. | Create VPC, 2 Private Subnets, 2 Public Subnets, Elastic IP, Internet Gateway, Nat Gateway, Public Route Table, Private Route Table, Load Balancer Security Group, Application Security Group | Set the foundation to deploy our application infrastructure onto |  [VPC.tf](https://github.com/djtoler/Deployment7/blob/main/intTerraform/vpc.tf)    |   | 
+|11. | <br><ul><li>VPC</li><li>2 Private Subnets</li><li>2 Public Subnets</li><li>Elastic IP</li><li>Internet Gateway</li><li>NAT Gateway</li><li>Public Route Table</li><li>Private Route Table</li><li>Load Balancer Security Group</li><li>Application Security Group</li></ul> | Set the foundation to deploy our application infrastructure onto |  [VPC.tf](https://github.com/djtoler/Deployment7/blob/main/intTerraform/vpc.tf)    |   | 
 |12. | Create a listener for the load balancer| To set the rules for the load balancer like which port to listen on, what to do with requests...| ![12](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/11.PNG)  |   |  
 |13. | Create a application load balancer | To route traffic based on certain requirements | ![13](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/12.PNG)  |   |
 |14. | Create a load balancer target group| To logically group resources together for the load balancer to route requests to (like web server group and application server group)| ![14](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/13.PNG) |   |
@@ -32,3 +32,4 @@
 ---
 
 ## System Diagram
+
