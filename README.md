@@ -25,14 +25,14 @@
 ### _Create CICD Pipeline and Infrastructure_
 * #### [Create a remote GitHub repository](https://github.com/djtoler/automated_installation_scripts/blob/main/auto-github_repo_create.sh)
 * #### Clone the banking application repository
-    * ```
+```
     git clone https://github.com/djtoler/Deployment7.git
     cd Deployment7
-    ```
+```
 * #### Create a `dev` branch in the repository and switch to it
-    * ```
+```
     git checkout -b dev
-    ```
+```
 * #### Make a `Dockerfile` for our Jenkins pipeline to build a Docker image from
 * #### Create a distributed Jenkins CICD infrastructure architecture using Terraform
     * #### Create an EC2 instance for our `Jenkins Controller` [using this userdata script](https://github.com/djtoler/Deployment7/blob/main/ud_jenkins_controller.sh) 
@@ -85,3 +85,4 @@
 ---
 
 ## System Optimization
+
