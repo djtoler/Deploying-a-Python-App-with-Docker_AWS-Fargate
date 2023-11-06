@@ -87,3 +87,8 @@
 ---
 
 ## System Optimization
+* #### Possibly a Bastion Host or some other method of allowing ingress traffic to our resources that are located inside private subnets.
+* #### A way to monitor changes in the application to determine if we actually need to rebuild and push our Docker images during every Jenkins build which is trigger everytime we update anything in our repository.
+* #### Add some resillience by implementing a multi-region architecture
+* #### Use a CDN for static files
+* #### A cache in front of our database for faster returns of data and decreasing the load on our database.
