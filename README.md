@@ -50,7 +50,7 @@
     * #### [Create a multi branch pipeline](https://github.com/djtoler/automated_installation_scripts/blob/main/manual_jenkins_multi_branch.txt)
   
 ### _CICD Pipeline and Infrastructure Explanation_
-#|<span style="width:200px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | <span style="width:200px">Business Case</span>  |
+#|<span style="width:300px">Step</span>|<span style="width:300px">Purpose</span>| Jenkinsfile  | <span style="width:200px">Business Case</span>  |
 |---|---|---|---|---|
 |1. |_Jenkins controller tells Docker agent to start working the pipeline_| Efficently handle workloads using a distributed system strategy  | ![1](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/1.PNG)   |  _Save money by configuring workload specific instances_ |
 |2. |_DockerHub credentials set in Jenkins enviornment_| Authorization to programatically push Docker images to DockerHub  | ![2](https://github.com/djtoler/Deployment7/blob/main/dp7_assets/2dockercreds.PNG)  |  _Save money  by reducing manual labor costs_ |
