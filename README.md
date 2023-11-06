@@ -12,6 +12,8 @@
 7. [System Optimization](#system-optimization)
 
 ## Purpose
+#### The purpose of this deployment was to evolve from running our application on virtual machines to running our application on containers. In Deployment 6, our CICD pipeline launched our application on EC2 instances inside of a virtual Python enviornment. By containerizing our application using AWS ECS and Fargate we get the benifit running our services in a resource efficient enviornmet thats managed by AWS. Plus, with Fargate, we only pay for executions of our workloads as opposed to paying for an EC2 instance by the hour, regardless of whether we're utilizing it or not. 
+
 ## Issues
 * #### Error for having too many VPC's in our AWS account: _Deleted unused VPC from account_
 * #### Thought we needed EC2 instances to run our Dockerfiles: _Re-read .tf files, visited load balancer URL & saw application running_
